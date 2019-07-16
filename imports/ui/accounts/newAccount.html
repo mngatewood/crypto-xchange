@@ -1,0 +1,13 @@
+<template name="NewAccount">
+  <div class="new-account-form">
+    <h2>Add an Account</h2>
+    {{> quickForm 
+      collection="Accounts" 
+      id="newAccountForm" 
+      type="insert" 
+      omitFields="createdAt, owner" 
+    }}
+  </div>
+
+
+</template>

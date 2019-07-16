@@ -1,3 +1,3 @@
 Meteor.publish('accounts', function () {
-  return Accounts.find({})
+  return Accounts.find({ owner: this.userId })
 })

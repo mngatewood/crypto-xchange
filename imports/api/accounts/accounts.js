@@ -37,3 +37,4 @@ Accounts.attachSchema(new SimpleSchema({
   },
 }));
 
+export default Accounts

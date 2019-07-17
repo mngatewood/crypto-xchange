@@ -1,0 +1,11 @@
+<template name="transactions">
+  <body>
+    <h2>Recent Transactions</h2>
+    <ul>
+      {{#each transactions}} 
+        {{> transaction }} 
+      {{/each}} 
+      {{> newTransaction }}
+    </ul>
+  </body>
+</template>

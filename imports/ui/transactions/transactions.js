@@ -5,6 +5,7 @@ import Transactions from '../../api/transactions/transactions.js';
 import './transaction.html';
 import './transactions.html';
 import './newTransfer.html';
+import './newDeposit.html';
 
 Template.transactions.onCreated(function transactionsOnCreated() {
   this.state = new ReactiveDict();

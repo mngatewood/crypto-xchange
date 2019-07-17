@@ -3,8 +3,6 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import Accounts from '../../api/accounts/accounts.js';
 import Transactions from '../../api/transactions/transactions.js';
-import './transaction.html';
-import './transactions.html';
 import './newTransfer.html';
 
 Template.newTransfer.onCreated(function newTransferOnCreated() {

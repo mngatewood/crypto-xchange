@@ -1,5 +1,5 @@
 Meteor.methods({
-  'submitNewTransaction': function(transaction) {
+  'submitNewTransfer': function(transaction) {
     let fromAccount = Accounts.findOne(transaction.fromAccount);
     let toAccount = Accounts.findOne(transaction.toAccount);
     let fromAccountName = fromAccount.desc;

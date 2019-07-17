@@ -4,7 +4,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import Transactions from '../../api/transactions/transactions.js';
 import './transaction.html';
 import './transactions.html';
-import './newTransaction.html';
+import './newTransfer.html';
 
 Template.transactions.onCreated(function transactionsOnCreated() {
   this.state = new ReactiveDict();

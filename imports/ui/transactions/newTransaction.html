@@ -1,0 +1,15 @@
+<template name="newTransaction">
+  <div class="new-transaction-form">
+    <h3>Transfer Funds</h3>
+    {{#autoForm collection="Transactions" id="newTransactionForm" type="insert"}}
+      <fieldset>
+        <legend>Transfer Funds</legend>
+          {{> afQuickField name="fromAccount" options=accountOptions }} 
+          {{> afQuickField name="toAccount" options=accountOptions }}
+          {{> afQuickField name='desc' }} 
+          {{> afQuickField name='amount' }} 
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+  </div>
+</template>

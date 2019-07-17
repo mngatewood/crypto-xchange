@@ -8,6 +8,7 @@ import './routes.js';
 import './accounts-config.js';
 
 import '../../ui/accounts/accounts.js';
+import '../../ui/accounts/account.js';
 import '../../ui/transactions/transactions.js';
 import '../../ui/transactions/transaction.js';
 import '../../ui/transactions/newTransfer.js';
@@ -17,6 +18,7 @@ import '../../ui/transactions/newWithdrawal.js';
 import '../../ui/layouts/dashboard.html';
 import '../../ui/accounts/newAccount.html';
 import '../../ui/accounts/accounts.html';
+import '../../ui/accounts/account.html';
 import '../../ui/transactions/transactions.html';
 import '../../ui/transactions/transaction.html';
 import '../../ui/transactions/newTransfer.html';

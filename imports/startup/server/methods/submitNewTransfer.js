@@ -1,12 +1,12 @@
 Meteor.methods({
   'submitNewTransfer': function(transaction) {
-    let fromAccount = Accounts.findOne(transaction.fromAccount);
-    let toAccount = Accounts.findOne(transaction.toAccount);
-    let fromAccountName = fromAccount.desc;
-    let toAccountName = toAccount.desc;
-    let fromBalance = fromAccount.bal;
-    let toBalance = toAccount.bal;
-    let amount = transaction.amount;
+    var fromAccount = Accounts.findOne(transaction.fromAccount);
+    var toAccount = Accounts.findOne(transaction.toAccount);
+    var fromAccountName = fromAccount.desc;
+    var toAccountName = toAccount.desc;
+    var fromBalance = fromAccount.bal;
+    var toBalance = toAccount.bal;
+    var amount = transaction.amount;
 
     if(amount > fromBalance) {
       throw new Meteor.Error('insufficient funds');
@@ -15,12 +15,14 @@ Meteor.methods({
     transaction.fromAccount = fromAccountName
     transaction.toAccount = toAccountName
 
-    if(fromAccount && toAccount) {
+    if(fromAccount && toAccount && amount) {
       Accounts.update(fromAccount, { $set: { bal: fromBalance - amount }})
       Accounts.update(toAccount, { $set: { bal: toBalance + amount }})
       Transactions.insert(transaction)
-    } else {
+    } else if(amount) {
       throw new Meteor.Error('unable to find the accounts');
+    } else {
+      throw new Meteor.Error('please enter an amount greater than zero');
     }
-  }
+  },
 })

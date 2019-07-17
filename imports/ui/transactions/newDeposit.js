@@ -5,11 +5,9 @@ import Accounts from '../../api/accounts/accounts.js';
 import Transactions from '../../api/transactions/transactions.js';
 import './newDeposit.html';
 
-AutoForm.debug() 
-
 Template.newDeposit.onCreated(function newDepositOnCreated() {
   this.state = new ReactiveDict();
-  Meteor.subscribe('accounts')
+  Meteor.subscribe('accounts');
 })
 
 Template.newDeposit.helpers({

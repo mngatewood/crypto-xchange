@@ -1,6 +1,5 @@
 Meteor.methods({
   'submitNewDeposit': function(transaction) {
-    console.log("here")
     var toAccount = Accounts.findOne(transaction.toAccount);
     var toAccountName = toAccount.desc;
     var toBalance = toAccount.bal;

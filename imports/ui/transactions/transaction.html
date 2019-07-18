@@ -1,9 +1,13 @@
 <template name="transaction">
   <li>
-    {{ fromAccount }} 
-    {{ toAccount }} 
-    {{ desc }}
-    {{ amount }}
-    {{ dayCreatedAt }}
+    <span class="transaction-list">
+      <span class="text-3-col">{{ fromAccount }}</span>
+      <span class="text-3-col">{{ toAccount }}</span>
+      <span class="text-4-col right">{{ amount }}</span>
+    </span>
+    <span class="transaction-list">
+      <span class="text-2-col">{{ desc }}</span>
+      <span class="text-2-col right">{{ dayCreatedAt }}</span>
+    </span>
   </li>
 </template>

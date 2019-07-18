@@ -1,11 +1,22 @@
 <template name="home">
-  <header>
-    <h1>Crypto-Xchange</h1>
-    {{> loginButtons }}
-  </header>
-  <main>
-    <div class="billboard">
-      <h2>Welcome to Crypto-Xchange</h2>
-    </div>
-  </main>
+  <div class="home">
+    <header>
+      <h1>Crypto-Xchange</h1>
+      {{> loginButtons }}
+    </header>
+    <main>
+      <div class="billboard">
+        <h2>Welcome to Crypto-Xchange</h2>
+        {{#if currentUser}}
+          <button 
+            onclick="window.location.href = '/dashboard';" 
+            class="get-started">
+            Get Started!
+          </button>
+        {{else}}
+          <button>Sign in or create an account to get started.</button>
+        {{/if}}
+      </div>
+    </main>
+  </div>
 </template>

@@ -6,6 +6,7 @@ import './transaction.html';
 import './transactions.html';
 import './newTransfer.html';
 import './newDeposit.html';
+import './newWithdrawal.html';
 
 Template.transactions.onCreated(function transactionsOnCreated() {
   this.state = new ReactiveDict();

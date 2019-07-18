@@ -1,0 +1,19 @@
+<template name="newWithdrawal">
+  <div class="new-withdrawal-form">
+    {{#autoForm 
+      collection="Transactions" 
+      id="newWithdrawalForm" 
+      type="method" 
+      meteormethod="submitNewWithdrawal"
+    }}
+      <fieldset>
+        <legend>Withdraw Funds</legend>
+          {{> afQuickField name="fromAccount" options=accountOptions }}
+          {{> afQuickField name="toAccount" hidden=true label=false value="---" }}
+          {{> afQuickField name='desc' hidden=true label=false value="Withdrawal"}}
+          {{> afQuickField name='amount' }} 
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+  </div>
+</template>

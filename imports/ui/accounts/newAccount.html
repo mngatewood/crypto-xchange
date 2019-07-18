@@ -1,11 +1,18 @@
 <template name="newAccount">
   <div class="new-account-form">
-    <h3>Add an Account</h3>
-    {{> quickForm 
-      collection="Accounts" 
-      id="newAccountForm" 
-      type="insert" 
-      omitFields="createdAt, owner" 
-    }}
+     {{#autoForm 
+        collection="Accounts" 
+        id="newAccountForm" 
+        type="method" 
+        meteormethod="submitNewAccount" 
+      }}
+      <fieldset>
+        <legend>Add an Account</legend>
+        {{> afQuickField name="den" }}
+        {{> afQuickField name="desc" }} 
+        {{> afQuickField name="bal" hidden=true label=false value=0 }}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
   </div>
 </template>

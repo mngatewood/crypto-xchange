@@ -18,4 +18,4 @@ Installation instructions:
 
 4. Launch your browser and navigate to: 
 
-```-> http://localhost:3000/dashboard```
+```-> http://localhost:3000```

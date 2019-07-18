@@ -1,4 +1,11 @@
-<template name="Accounts">
-  <h2>Open Accounts</h2>
-  {{> NewAccount }}
+<template name="accounts">
+  <body>
+    <h2>Open Accounts</h2>
+    <ul>
+      {{#each accounts}}
+        {{> account }}
+      {{/each}}
+      {{> newAccount }}
+    </ul>
+  </body>
 </template>

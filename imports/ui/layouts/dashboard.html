@@ -1,13 +1,15 @@
 <template name="dashboard">
   <header>
-    <h1>Crypto-Xchange</h1>
+    <h1 class="home-link"><a href="/">Crypto-Xchange</a></h1>
     {{> loginButtons }}
   </header>
-  <main>
-    <div class="dashboard">
-      <h1>Dashboard</h1>
-      {{> accounts }}
-      {{> transactions }}
-    </div>
-  </main>
+  {{ #if currentUser }}
+    <main>
+      <div class="dashboard">
+        <h1>Dashboard</h1>
+        {{> accounts }}
+        {{> transactions }}
+      </div>
+    </main>
+  {{/if}}
 </template>

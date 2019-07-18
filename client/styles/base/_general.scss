@@ -1,0 +1,116 @@
+// Variables -------------------------------------
+
+
+// Mixins --------------------------------------
+
+
+// Placeholders --------------------------------------
+
+
+// Styles --------------------------------------
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-sans-family;
+  color: $color-text;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+
+  &:visited,
+  &:active {
+    color: $color-link;
+  }    
+}
+
+*:focus {
+  outline: 0;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  
+  &[type=text],
+  &[type=password] {
+    width: 100%;
+    display: block;
+    height: 2.5em;
+    border-radius: 0.15em;
+    border: 1px solid $color-gray-lighter;
+    padding: 0 .5em;
+    color: $color-text;
+  }
+  &[hidden] {
+    display: none;
+  }
+}
+
+textarea {
+  border-radius: 0.15em;
+  border: 1px solid $color-gray-lighter;
+  padding: .5em;
+  color: $color-text;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+ 
+.delete {
+  padding: 0;
+  margin: 0px 10px;
+  float: right;
+}
+ 
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: #eee solid 1px;
+}
+
+li .text-4-col {
+  display: inline-block;
+  width: 26%;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+li .text-3-col {
+  display: inline-block;
+  width: 30%;
+  margin-left: 10px;
+}
+
+li .text-2-col {
+  display: inline-block;
+  width: 45%;
+  margin-left: 10px;
+}
+
+li .right {
+  text-align: right;
+}
+
+li .transaction-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+

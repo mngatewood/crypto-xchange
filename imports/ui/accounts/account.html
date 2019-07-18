@@ -1,8 +1,10 @@
 <template name="account">
-  <li>
-    {{ desc }}
-    {{ den }}
-    {{ bal }}
-    <button class="delete">&times;</button>
+  <li class="accounts-list">
+    <!-- <span class="accounts-list"> -->
+      <span class="text-4-col">{{ desc }}</span>
+      <span class="text-4-col">{{ den }}</span>
+      <span class="text-4-col right">{{ bal }}</span>
+    <!-- </span> -->
+      <button class="delete right">&times;</button>
   </li>
 </template>

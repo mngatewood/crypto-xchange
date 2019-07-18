@@ -12,7 +12,7 @@ Accounts.allow({
 Accounts.attachSchema(new SimpleSchema({
   den: {
     type: String,
-    label: "Denomination"
+    label: "Currency (USD, Bitcoin, etc.)"
   },
   desc: {
     type: String,

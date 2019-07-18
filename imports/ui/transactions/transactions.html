@@ -2,6 +2,17 @@
   <body>
     <h2>Recent Transactions</h2>
     <ul>
+      <li>
+        <span class="transaction-list">
+          <span class="text-3-col"><strong>From</strong></span>
+          <span class="text-3-col"><strong>To</strong></span>
+          <span class="text-4-col right"><strong>Amount</strong></span>
+        </span>
+        <span class="transaction-list">
+          <span class="text-2-col"><strong>Description</strong></span>
+          <span class="text-2-col right"><strong>Date</strong></span>
+        </span>
+      </li>
       {{#each transactions}} 
         {{> transaction }} 
       {{/each}} 

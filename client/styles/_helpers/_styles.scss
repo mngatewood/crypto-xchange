@@ -1,0 +1,33 @@
+// Easy Math
+* {
+  box-sizing: border-box;
+}
+
+// Bonus Clearfix Style --------------------------------
+.clearfix {
+  
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+
+  &.align-middle {
+    vertical-align: middle;
+  }
+}

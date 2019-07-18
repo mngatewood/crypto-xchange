@@ -10,10 +10,12 @@ import './accounts-config.js';
 import '../../ui/accounts/accounts.js';
 import '../../ui/transactions/transactions.js';
 import '../../ui/transactions/newTransfer.js';
+import '../../ui/transactions/newDeposit.js';
 
 import '../../ui/layouts/dashboard.html';
 import '../../ui/accounts/newAccount.html';
 import '../../ui/accounts/accounts.html';
-import '../../ui/transactions/newTransfer.html';
 import '../../ui/transactions/transactions.html';
+import '../../ui/transactions/newTransfer.html';
+import '../../ui/transactions/newDeposit.html';
 

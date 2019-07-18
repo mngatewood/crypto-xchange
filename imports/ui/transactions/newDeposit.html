@@ -1,16 +1,16 @@
-<template name="newTransfer">
-  <div class="new-transfer-form">
+<template name="newDeposit">
+  <div class="new-deposit-form">
     {{#autoForm 
       collection="Transactions" 
-      id="newTransferForm" 
+      id="newDepositForm" 
       type="method" 
-      meteormethod="submitNewTransfer"
+      meteormethod="submitNewDeposit"
     }}
       <fieldset>
-        <legend>Transfer Funds</legend>
-          {{> afQuickField name="fromAccount" options=accountOptions }} 
+        <legend>Deposit Funds</legend>
+          {{> afQuickField name="fromAccount" hidden=true label=false value="---" }}
           {{> afQuickField name="toAccount" options=accountOptions }}
-          {{> afQuickField name='desc' }} 
+          {{> afQuickField name='desc' hidden=true label=false value="Deposit"}}
           {{> afQuickField name='amount' }} 
       </fieldset>
       <button type="submit" class="btn btn-primary">Submit</button>

@@ -1,26 +1,30 @@
 import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
-Accounts = new Mongo.Collection('accounts');
+Transactions = new Mongo.Collection('transactions');
 
-Accounts.allow({
-  insert: function(userId, doc) {
+Transactions.allow({
+  insert: function (userId, doc) {
     return !!userId;
   }
 });
 
-Accounts.attachSchema(new SimpleSchema({
-  den: {
+Transactions.attachSchema(new SimpleSchema({
+  fromAccount: {
     type: String,
-    label: "Denomination"
+    label: "From Account"
+  },
+  toAccount: {
+    type: String,
+    label: "To Account"
   },
   desc: {
     type: String,
     label: "Description"
   },
-  bal: {
+  amount: {
     type: Number,
-    label: "Account Balance"
+    label: "Amount"
   },
   owner: {
     type: String,
@@ -38,4 +42,4 @@ Accounts.attachSchema(new SimpleSchema({
   },
 }));
 
-export default Accounts
+export default Transactions

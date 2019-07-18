@@ -1,0 +1,20 @@
+<template name="newTransfer">
+  <div class="new-transfer-form">
+    <h3>Transfer Funds</h3>
+    {{#autoForm 
+      collection="Transactions" 
+      id="newTransferForm" 
+      type="method" 
+      meteormethod="submitNewTransfer"
+    }}
+      <fieldset>
+        <legend>Transfer Funds</legend>
+          {{> afQuickField name="fromAccount" options=accountOptions }} 
+          {{> afQuickField name="toAccount" options=accountOptions }}
+          {{> afQuickField name='desc' }} 
+          {{> afQuickField name='amount' }} 
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+  </div>
+</template>
